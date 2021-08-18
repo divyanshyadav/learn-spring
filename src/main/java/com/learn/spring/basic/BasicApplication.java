@@ -1,4 +1,4 @@
-package com.lean.spring.basic;
+package com.learn.spring.basic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

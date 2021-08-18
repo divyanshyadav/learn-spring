@@ -1,4 +1,4 @@
-package com.lean.spring.scope;
+package com.learn.spring.scope;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;

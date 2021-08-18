@@ -1,10 +1,12 @@
-package com.lean.spring.scope;
+package com.learn.spring.scope;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import com.learn.spring.basic.BinarySearchImpl;
 
 @SpringBootApplication
 public class ScopeApplication {

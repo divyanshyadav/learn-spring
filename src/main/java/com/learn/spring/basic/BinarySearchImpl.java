@@ -1,4 +1,4 @@
-package com.lean.spring.basic;
+package com.learn.spring.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
