@@ -1,5 +1,6 @@
 # Learn Spring
 
 ## Modules
-- Basics
+- Basic
 - Scope
+- CDI (Context and Dependency Injection) Standard

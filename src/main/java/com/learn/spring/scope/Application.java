@@ -12,13 +12,13 @@ import com.learn.spring.basic.BinarySearchImpl;
 @SpringBootApplication
 @ComponentScan("com.learn.spring.basic") // search components in the given package
 @ComponentScan("com.learn.spring.scope")
-public class ScopeApplication {
+public class Application {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(ScopeApplication.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(Application.class);
 	
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = 
-				SpringApplication.run(ScopeApplication.class, args);
+				SpringApplication.run(Application.class, args);
 		
 		PersonDAO person1 = applicationContext.getBean(PersonDAO.class);
 		PersonDAO person2 = applicationContext.getBean(PersonDAO.class);
