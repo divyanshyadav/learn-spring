@@ -2,14 +2,14 @@ package com.learn.spring.scope;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.learn.spring.basic.BinarySearchImpl;
 
-@SpringBootApplication
+@Configuration
 @ComponentScan("com.learn.spring.basic") // search components in the given package
 @ComponentScan("com.learn.spring.scope")
 public class Application {
@@ -17,8 +17,8 @@ public class Application {
 	private static Logger LOGGER = LoggerFactory.getLogger(Application.class);
 	
 	public static void main(String[] args) {
-		ConfigurableApplicationContext applicationContext = 
-				SpringApplication.run(Application.class, args);
+		ApplicationContext applicationContext = 
+				new AnnotationConfigApplicationContext(Application.class);
 		
 		PersonDAO person1 = applicationContext.getBean(PersonDAO.class);
 		PersonDAO person2 = applicationContext.getBean(PersonDAO.class);
