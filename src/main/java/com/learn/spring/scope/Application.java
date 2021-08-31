@@ -2,7 +2,6 @@ package com.learn.spring.scope;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +16,7 @@ public class Application {
 	private static Logger LOGGER = LoggerFactory.getLogger(Application.class);
 	
 	public static void main(String[] args) {
-		ApplicationContext applicationContext = 
+		AnnotationConfigApplicationContext applicationContext = 
 				new AnnotationConfigApplicationContext(Application.class);
 		
 		PersonDAO person1 = applicationContext.getBean(PersonDAO.class);
@@ -27,5 +26,7 @@ public class Application {
 		LOGGER.info("Person1: {} {}", person1, person1.getJdbcConnection());
 		LOGGER.info("Person2: {} {}", person2, person2.getJdbcConnection());
 		LOGGER.info("BinarySearch: {}", binarySearch);
+		
+		applicationContext.close();
 	}
 }
